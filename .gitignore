@@ -1,10 +1,7 @@
-.dist/*
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-*.code-workspace
+.vscode
+.dist
+package-lock.json
+node_modules
+*.sql
+public-html/donationImages/*
 
-# Local History for Visual Studio Code
-.history/

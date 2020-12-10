@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>
+
     <link rel="shortcut icon" type="image/x-icon" href="./img/fav-icon.ico" />
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
@@ -13,12 +15,11 @@
 
 
 
-
     <link rel="stylesheet" href="css/style.css">
     <style>
 
     </style>
-    <title>Register | Covision</title>
+    <title>Post Facility | Covision</title>
 </head>
 
 <body>
@@ -56,120 +57,163 @@
             <a id="navUser" class="btn btn-outline-info btn-md m-1" href="/manageaccount.html" role="button"
                 style="display:none; background-color:rgb(159, 190, 231); color:black;"></a>
         </nav>
+
     </header>
 
 
-
     <div class="container">
+
+
         <div class="row">
             <div class="col-12">
-                <h1 class="display-4 text-center my-4">Register</h1>
+                <h1 class="display-4 text-center my-4">Post a Facility</h1>
             </div>
         </div>
 
-        <p id="emailTaken"
-            style="display:none;font-weight:bold;color:rgb(0, 0, 0);background-color:rgb(207, 80, 80); border:2px solid black;padding:1em;margin:1em;text-align:center; font-size:1.5em;">
 
-            Sorry, that email is already in use.
-        </p>
+        <form class="form-container" id="postFacility" method="POST">
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="facilityChoice" style="font-weight:bold">Facility type</label>
+                        <select id="facilityChoice" name="facilityChoice" class="form-control">
+                            <option selected value="">Choose facility type</option>
+                            <option id="chooseMedical">Medical Facility</option>
+                            <option id="chooseTesting">Testing Facility</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="col">
+                    <div class="form-group">
+                        <label for="facilityName" style="font-weight:bold">Facility name</label>
+                        <input id="facilityName" name="facilityName" class="form-control" type="text"
+                            placeholder="Facility name">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label for="Address" style="font-weight:bold">Address</label>
+                        <input id="address" name="address" class="form-control" type="text"
+                            placeholder="Address"></input>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="city" style="font-weight:bold">City</label>
+                        <input id="city" name="city" class="form-control" type="text" placeholder="City"></input>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="phone" style="font-weight:bold">Phone Number</label>
+                        <input id="phone" name="phone" class="form-control" type="phone"
+                            placeholder="XXX-XXX-XXXX"></label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <h3>Hours of Operation</h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="form-group hours">
+                        <label for="sunday" style="font-weight:bold">Sunday</label>
+                        <input id="sunday" name="sunday" class="form-control" type="text" placeholder="Hours"></input>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="monday" style="font-weight:bold">Monday</label>
+                        <input id="monday" name="monday" class="form-control" type="text" placeholder="Hours"></input>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="tuesday" style="font-weight:bold">Tuesday</label>
+                        <input id="tuesday" name="tuesday" class="form-control" type="text" placeholder="Hours"></input>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="wednesday" style="font-weight:bold">Wednesday</label>
+                        <input id="wednesday" name="wednesday" class="form-control" type="text"
+                            placeholder="Hours"></input>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="thursday" style="font-weight:bold">Thursday</label>
+                        <input id="thursday" name="thursday" class="form-control" type="text"
+                            placeholder="Hours"></input>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="friday" style="font-weight:bold">Friday</label>
+                        <input id="friday" name="friday" class="form-control" type="text" placeholder="Hours"></input>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="saturday" style="font-weight:bold">Saturday</label>
+                        <input id="saturday" name="saturday" class="form-control" type="text"
+                            placeholder="Hours"></input>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <h3>More Information</h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="info" style="font-weight:bold">Tell us more about your facility!</label>
+                        <textarea id="info" name="info" class="form-control" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div style="font-weight:bold">
+                        Would you like to sign up for our donation system?
+                    </div>
+                    <div>
+                        This would allow your facility to receive donations, as well as post donations for those in
+                        need! Click the checkbox to sign up!
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-check">
+                        <input id="donateCheck" class="form-check-input" type="checkbox">
+                        <label class="form-check-label" for="donateCheck">
+                            Sign up for our donation system
+                        </label>
+                    </div>
+                </div>
+                <div class="col">
+                    <p style="color:red;display:none;" class='font-weight-bold' id="nameTaken">Name Taken</p>
+                    <button class="btn btn-primary btn-block" id="facilitySubmit" type="submit">Submit</button>
+                </div>
+
+            </div>
     </div>
 
-    <div class="container-fluid">
+    </form>
 
-
-
-        <div class="row justify-content-center">
-            <ul class="nav nav-pills" id="tabs" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" id="customer-tab" data-toggle="tab" href="#customer" role="tab"
-                        aria-controls="customer" aria-selected="true">Customer</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="provider-tab" data-toggle="tab" href="#provider" role="tab"
-                        aria-controls="provider" aria-selected="false">Provider</a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="tab-content">
-            <div class="tab-pane fade show active" id="customer" role="tabpanel" aria-labelledby="customer-tab">
-                <div class="row justify-content-center">
-                    <form class="form-container" id="customerRegister" method="POST">
-                        <legend>Create a customer account!</legend>
-                        <div class="form-group">
-                            <label for="customerFirst" style="font-weight:bold">First Name</label>
-                            <input class="form-control" type="text" id="customerFirst" name="customerFirst"
-                                placeholder="Enter first name">
-                        </div>
-                        <div class="form-group">
-                            <label for="customerLast" style="font-weight:bold">Last Name</label>
-                            <input class="form-control" type="text" id="customerLast" name="customerLast"
-                                placeholder="Enter last name">
-                        </div>
-                        <div class="form-group">
-                            <label for="customerEmail" style="font-weight:bold">Email</label>
-                            <input class="form-control" type="email" id="customerEmail" name="customerEmail"
-                                placeholder="Enter email address">
-
-                        </div>
-                        <div class="form-group">
-                            <label for="customerPassword1" style="font-weight:bold">Password</label>
-                            <input class="form-control" type="password" id="customerPassword1" name="customerPassword1"
-                                placeholder="Enter password">
-
-                        </div>
-                        <div class="form-group">
-                            <label for="customerPassword2" style="font-weight:bold">Confirm Password</label>
-                            <input class="form-control" type="password" id="customerPassword2" name="customerPassword2"
-                                placeholder="Re-enter Password">
-
-                        </div>
-                        <div class="form-group">
-
-                            <button class="btn btn-primary btn-block" id="customerSubmit"
-                                type="submit">Register</button>
-                        </div>
-
-                    </form>
-                </div>
-            </div>
-
-            <div class="tab-pane fade" id="provider" role="tabpanel" aria-labelledby="provider-tab">
-                <div class="row justify-content-center">
-                    <form class="form-container " id="providerRegister" method="POST">
-                        <legend>Create a provider account!</legend>
-                        <div class="form-group">
-                            <label for="providerEmail" style="font-weight:bold">Email</label>
-                            <input class="form-control" type="email" id="providerEmail" name="providerEmail"
-                                placeholder="Enter email address" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="providerName" style="font-weight:bold">Name</label>
-                            <input class="form-control" type="text" id="providerName" name="providerName"
-                                placeholder="Enter name" required>
-
-                        </div>
-                        <div class="form-group">
-                            <label for="providerPassword1" style="font-weight:bold">Password</label>
-                            <input class="form-control" type="password" id="providerPassword1" name="providerPassword1"
-                                placeholder="Enter password" required>
-
-                        </div>
-                        <div class="form-group">
-                            <label for="providerPassword2" style="font-weight:bold">Confirm Password</label>
-                            <input class="form-control" type="password" id="providerPassword2" name="providerPassword2"
-                                placeholder="Re-enter password" required>
-
-                        </div>
-                        <div class="form-group">
-                            <button class="btn btn-primary btn-block" id="providerSubmit"
-                                type="submit">Register</button>
-                        </div>
-                    </form>
-
-                </div>
-            </div>
-        </div>
+    </div>
     </div>
     <footer class="footer">
         <div class="container my-5">
@@ -235,6 +279,7 @@
             </div>
         </div>
 
+
         <!-- jQuery first, then Tether, then Bootstrap JS. -->
         <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
             integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
@@ -251,9 +296,9 @@
 
         <!--Validation Script-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
-
-        <script src="../js/register.js"></script>
+        <script src="../js/postFacility.js"></script>
         <script src="../js/generic.js"></script>
+
 </body>
 
 </html>

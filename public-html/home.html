@@ -1,11 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home | Covision </title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel='shortcut icon' type='image/x-icon' href='./img/fav-icon.ico' />
 </head>
-<body>
-    HOME
-</body>
+
+
+<div class="background">
+
+    <body>
+        <header>
+            <nav class="navbar fixed-top navbar-toggleable-sm bg-primary navbar-inverse">
+                <a class="navbar-brand" href="home.html"><img id="logo" class="" src="./img/logo.png"></a>
+                <div class="container">
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#mainNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="mainNav">
+                        <div class="navbar-nav">
+                            <li><a class="nav-item nav-link active text-center" href="/home.html">Home</a></li>
+                            <li><a class="nav-item nav-link text-center" href="/medical">Medical
+                                    Facilities</a></li>
+                            <li><a class="nav-item nav-link text-center" href="/testing">Testing
+                                    Sites</a>
+                            </li>
+                            <li><a class="nav-item nav-link text-center" href="/requestppe">Request PPE</a></li>
+                            <li><a class="nav-item nav-link text-center" href="/donateppe">Donate PPE</a></li>
+                            <li>
+                                <a class="nav-item nav-link text-center" href="/postfacility.html"
+                                    id="providerAddFacility">Post Facility</a>
+                            </li>
+                            <li>
+                                <a class="nav-item nav-link text-center" href="/managedonations.html"
+                                    id="providerManageDonations">Manage Donations</a>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                <a id="navLogin" class="btn btn-success btn-md m-1" href="/login.html" role="button">Log In</a>
+                <a id="navRegister" class="btn btn-danger btn-md m-1" href="/register.html" role="button">Register</a>
+                <a id="navLogout" class="btn btn-outline-info btn-md m-1" role="button"
+                    style="display:none;background-color:rgb(147, 209, 233)">Log Out</a>
+                <a id="navUser" class="btn btn-outline-info btn-md m-1" href="/manageaccount.html" role="button"
+                    style="display:none; background-color:rgb(159, 190, 231); color:black;"></a>
+            </nav>
+        </header>
+
+
+
+        <section class="hero">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="container">
+                            <img class="logo-hero" src="./img/logo-lg.png">
+                            <h1>PPE for those<span> who need it most.</span></h1>
+                            <div class="row">
+                                <div class="col-mid-7">
+                                    <p>Covision provides donated PPE to frontline workers and our <span>community with a
+                                            sense of
+                                            urgency and a focus on equity.</span> </p>
+                                    <a class="btn btn-primary btn-md" href="#" role="button">Learn More...</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container">
+                            <img class="logo-hero" src="./img/logo-lg.png">
+                            <h1>Face Masks, <span> Anyone?</span></h1>
+                            <div class="row">
+                                <div class="col-mid-7">
+                                    <p>We're committed to help lower the infection rates of COVID-19. <span>Don't have a
+                                            face mask?
+                                            No
+                                            problem. Request one here for free.</span></p>
+                                    <a class="btn btn-primary btn-md" href="" role="button">Learn More...</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container">
+                            <img class="logo-hero" src="./img/logo-lg.png">
+                            <h1>Fight Spread <span> of COVID-19 </span></h1>
+                            <div class="row">
+                                <div class="col-mid-7">
+                                    <p>Get tested, obtain PPE and donate to those who are in need.
+                                    </p>
+                                    <a class="btn btn-primary btn-md" href="" role="button">Learn More...</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </section>
+
+
+        <main>
+            <div class="introduction">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img class="facemask" src="./img/facemask.png" alt="">
+                        </div>
+                        <div class="col-md-6 my-3">
+                            <h2 class="display-4">For the community, by the community.</h2>
+                            <p class="lead">Providing New Haven County a platform for various COVID-19 related
+                                needs. Search for nearby
+                                testing centers, medical facilities and request PPE donated
+                                by our community.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="overview">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class=" display-4 text-center my-4">How It Works</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img class="center-block" src="./img/provider-facility.png" alt="">
+                            <h3 class="text-center my-4">Post Your Facility.</h3>
+                            <p class="lead text-center">Specify hours and testing protocols. Opt into our drop-in PPE
+                                donation System.
+                            </p>
+                        </div>
+                        <div class="col-md-4">
+                            <img class="center-block" src="./img/provider-donate.png" alt="">
+                            <h3 class="text-center my-4">Manage Your Donations.</h3>
+                            <p class="lead text-center">See your donation requests, what have been donated to you, and
+                                list
+                                what you are able to donate.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <img class="center-block" src="./img/provider-notification.png" alt="">
+                            <h3 class="text-center my-4">Get Notified.</h3>
+                            <p class="lead text-center">See when customers are sending PPE your way.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-cards">
+                <!-- Feature Cards Section -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-3 align-items-stretch">
+                            <div class="card h-100">
+                                <a class="stretched-link text-decoration-none" href="/medicalfacilities.html">
+                                    <img src="img/medical.jpg" class="card-img-top img-fluid" />
+                                </a>
+                                <div class="card-block">
+                                    <h3 class="card-title">Medical Facilities</h3>
+                                    <p class="lead">In need for immediate medical care? See all available medical
+                                        facilities
+                                        in
+                                        New Haven County.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card h-100">
+                                <a class="stretched-link text-decoration-none" href="/testingsites.html">
+                                    <img src="img/testing.jpg" class="card-img-top img-fluid" />
+                                </a>
+                                <div class="card-block">
+                                    <h3 class="card-title">Testing Sites</h3>
+                                    <p class="lead">Scheduling a COVID-19 test? Search for the nearest testing sites in
+                                        New
+                                        Haven County.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card h-100">
+                                <a class="stretched-link text-decoration-none" href="/requestppe.html">
+                                    <img src="img/ppe.jpg" class="card-img-top img-fluid" />
+                                </a>
+                                <div class="card-block">
+                                    <h3 class="card-title">PPE Requests</h3>
+                                    <p class="lead">Are you a business, school, or person short of COVID-19 prevention
+                                        supplies?
+                                        Request them here.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card h-100">
+                                <a class="stretched-link text-decoration-none" href="/donateppe.html">
+                                    <img src="img/donate.jpg" class="card-img-top img-fluid" />
+                                </a>
+                                <div class="card-block">
+                                    <h3 class="card-title">PPE Donations</h3>
+                                    <p class="lead">Join our community in the fight against COVID-19. Donate your
+                                        supplies
+                                        here.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        </main>
+        <footer class="footer">
+            <div class="container my-5">
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="/home.html"><img src="./img/logo.png" alt=""></a>
+                    </div>
+                    <div class="col-lg-3">
+                        <ul class="footer-nav">
+                            <a href="/medicalfacilities.html">
+                                <li>Medical Facilities</li>
+                            </a>
+                            <a href="/testingfacilities.html">
+                                <li>Testing Sites</li>
+                            </a>
+                            <a href="/requestppe.html">
+                                <li>Request PPE</li>
+                            </a>
+                            <a href="/donateppe.html">
+                                <li>Donate PPE</li>
+                            </a>
+                            <a href="/postfacility.html">
+                                <li>Post Facility</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3">
+                        <ul class="footer-nav">
+                            <a href="/faq.html">
+                                <li>FAQ</li>
+                            </a>
+                            <a href="#">
+                                <li>Contact Us</li>
+                            </a>
+                            <a href="/privacypolicy.html">
+                                <li>Privacy Policy</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3">
+                        <ul>
+                            <li><i class="fas fa-phone"></i> 203-321-4321</li>
+                            <li><i class="fas fa-envelope-square"></i> covision@covision.com</li>
+                        </ul>
+                        <ul class="social-media">
+                            <li>
+                                <a class="sm-circle" href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sm-circle" href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sm-circle" href="#">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+
+
+        <!-- jQuery first, then Tether, then Bootstrap JS. -->
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+            integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+            integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+            integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+            crossorigin="anonymous"></script>
+        <script src="../js/generic.js"></script>
+    </body>
+</div>
+
 </html>

@@ -1,11 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./img/fav-icon.ico" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CDN reference for validation styling-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Log in | Covision</title>
 </head>
+
 <body>
-    LOGIN
+    <header>
+        <nav class="navbar fixed-top navbar-toggleable-sm bg-primary navbar-inverse">
+
+            <a class="navbar-brand" href="home.html"><img class="logo-responsive" src="./img/logo.png"></a>
+
+            <div class="container">
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <div class="navbar-nav">
+                        <li><a class="nav-item nav-link active text-center" href="/home.html">Home</a></li>
+                        <li><a class="nav-item nav-link text-center" href="/medicalfacilities.html">Medical
+                                Facilities</a></li>
+                        <li><a class="nav-item nav-link text-center" href="/testingfacilities.html">Testing Sites</a>
+                        </li>
+                        <li><a class="nav-item nav-link text-center" href="/requestppe.html">Request PPE</a></li>
+                        <li><a class="nav-item nav-link text-center" href="/donateppe.html">Donate PPE</a></li>
+
+                        <li><a class="nav-item nav-link text-center" href="/postfacility.html" id="providerAddFacility"
+                                style="display:none;">Post Facility</a></li>
+                        <li><a class="nav-item nav-link text-center" href="/managedonations.html"
+                                id="providerManageDonations" style="display:none;">Manage Donations</a></li>
+                    </div>
+                </div>
+            </div>
+            <a id="navLogin" class="btn btn-success btn-md m-1" href="/login.html" role="button">Log In</a>
+            <a id="navRegister" class="btn btn-danger btn-md m-1" href="/register.html" role="button">Register</a>
+            <a id="navLogout" class="btn btn-outline-info btn-md m-1" role="button"
+                style="display:none;background-color:rgb(147, 209, 233)">Log Out</a>
+            <a id="navUser" class="btn btn-outline-info btn-md m-1" href="/manageaccount.html" role="button"
+                style="display:none; background-color:rgb(159, 190, 231); color:black;"></a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="display-4 text-center my-4">Login</h1>
+                </div>
+            </div>
+
+            <p id="wrongPassword"
+                style="display:none;font-weight:bold;color:rgb(0, 0, 0);background-color:rgb(207, 80, 80); border:2px solid black;padding:1em;margin:1em;text-align:center;font-size:1.5em;">
+                Wrong Password
+            </p>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <ul class="nav nav-pills" id="tabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="customer-tab" data-toggle="tab" href="#customer" role="tab"
+                            aria-controls="customer" aria-selected="true">Customer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="provider-tab" data-toggle="tab" href="#provider" role="tab"
+                            aria-controls="provider" aria-selected="false">Provider</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="customer" role="tabpanel" aria-labelledby="customer-tab">
+                    <div class="row justify-content-center">
+                        <form class="form-container" id="customerLogin" method="POST">
+                            <div class="form-group">
+                                <label for="customerEmail" style="font-weight:bold">Email</label>
+                                <input type="text" class="form-control" id="customerEmail" name="customerEmail"
+                                    placeholder="Enter Username">
+
+                            </div>
+                            <div class="form-group">
+                                <label for="customerPassword" style="font-weight:bold">Password</label>
+                                <input type="password" class="form-control" id="customerPassword"
+                                    name="customerPassword" placeholder="Enter Password">
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" id="customerSubmit" class="btn btn-primary btn-block">Log
+                                    in</button>
+                            </div>
+
+                            <div class="row text-center">
+
+                                <div id="forgotContainerCustomer" class="col">
+                                    <a class="btn btn-outline-info p-1" href="/register">Need an Account?</a>
+                                    <button id="customerForgot" type="button" class="btn btn-outline-info p-1">Forgot
+                                        Password?</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="provider" role="tabpanel" aria-labelledby="provider-tab">
+                    <div class="row justify-content-center">
+                        <form class="form-container" id="providerLogin" method="POST">
+                            <div class="form-group">
+                                <label for="providerEmail" style="font-weight:bold">Email</label>
+                                <input type="text" class="form-control" id="providerEmail" name="providerEmail"
+                                    placeholder="Enter Email">
+
+                            </div>
+                            <div class="form-group">
+                                <label for="providerPassword" style="font-weight:bold">Password</label>
+                                <input type="password" class="form-control" id="providerPassword"
+                                    name="providerPassword" placeholder="Enter Password">
+
+                            </div>
+
+
+
+                            <div class="form-group">
+                                <button type="submit" id="providerSubmit" class="btn btn-primary btn-block">Log
+                                    in</button>
+                            </div>
+                            <div class="row text-center">
+
+                                <div id="forgotContainerProvider" class="col">
+                                    <a class="btn btn-outline-info p-1" href="/register">Need an Account?</a>
+                                    <button id="providerForgot" type="button" class="btn btn-outline-info p-1">Forgot
+                                        Password?</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-md-3">
+                    <a href="/home.html"><img src="./img/logo.png" alt=""></a>
+                </div>
+                <div class="col-lg-3">
+                    <ul class="footer-nav">
+                        <a href="/medicalfacilities.html">
+                            <li>Medical Facilities</li>
+                        </a>
+                        <a href="/testingfacilities.html">
+                            <li>Testing Sites</li>
+                        </a>
+                        <a href="/requestppe.html">
+                            <li>Request PPE</li>
+                        </a>
+                        <a href="/donateppe.html">
+                            <li>Donate PPE</li>
+                        </a>
+                        <a href="/postfacility.html">
+                            <li>Post Facility</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <ul class="footer-nav">
+                        <a href="/faq.html">
+                            <li>FAQ</li>
+                        </a>
+                        <a href="#">
+                            <li>Contact Us</li>
+                        </a>
+                        <a href="/privacypolicy.html">
+                            <li>Privacy Policy</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <ul>
+                        <li><i class="fas fa-phone"></i> 203-321-4321</li>
+                        <li><i class="fas fa-envelope-square"></i> covision@covision.com</li>
+                    </ul>
+                    <ul class="social-media">
+                        <li>
+                            <a class="sm-circle" href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="sm-circle" href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="sm-circle" href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        </script>
+        <!-- jQuery first, then Tether, then Bootstrap JS. -->
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+            integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+            integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+            integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+            crossorigin="anonymous"></script>
+
+        <!--Validation Script-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+
+        <script src="../js/login.js"></script>
+        <script src="../js/generic.js"></script>
+
 </body>
+
 </html>

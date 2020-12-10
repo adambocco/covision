@@ -1,0 +1,221 @@
+
+html, body {
+  position: relative;
+  top:25px;
+  background: url(../img/bg.png);
+  background-repeat: repeat;
+  background-attachment: fixed;
+  scroll-behavior: smooth;
+  
+}
+
+.background {
+  background-image: linear-gradient(rgba(0, 102, 102, 0.212),rgba(51, 95, 153, 0.2)), url(../img/hero1.png);
+  background-attachment: fixed;
+  background-repeat:no-repeat;
+  background-position:center;
+} /*hacky way to stylize the hero the way I want */
+
+.hero {
+  height: 80vh;
+  padding-top: 8vh;
+  padding-bottom: 30vh;
+}
+
+
+section h1 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 4rem;
+  color: white;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.logo-hero {
+  padding-top: 15%;
+}
+
+section p {
+  font-family: 'Arvo', serif;
+  font-size: 1.3rem;
+  line-height: 1.3;
+  color: white;
+  text-shadow: 1px 1px 1px #000;
+  padding-bottom: 3%;
+}
+
+
+.introduction {
+  background: url(../img/bg-curve-intro.png);
+  background-position: center;
+  background-size: cover;
+  background-size: no-repeat;
+}
+
+.overview {
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background: url(../img/bg-curve-overview.png);
+  background-color: #f8f8fe;
+  background-position: center;
+  background-size: cover;
+  background-size: no-repeat;
+}
+
+.feature-cards {
+  padding-top: 3%;
+  padding-bottom: 3%;
+  background: url(../img/bg-curve-cards.png);
+  background-color: #f5fcec;
+  background-position: center;
+  background-size: cover;
+  background-size: no-repeat;
+}
+
+.card {
+  border-radius:5%;
+}
+
+.card-img-top {
+  border-radius:5%;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.facemask {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+
+nav {
+  z-index: 1000;
+}
+
+main {
+  min-height: 100vh;
+}
+#logo {
+  width: 130px;
+  height: inherit
+}
+
+.form-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px #384048;
+  }
+
+
+.row div {
+  padding:20px 10px;
+}
+
+.form-row-margin{
+  height:10px;
+  margin-bottom:120px;
+}
+
+.search {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+
+.span {
+    display: inline;
+  }
+span:before {
+    content: "\a ";
+    white-space: pre;
+}
+
+.stretched-link:hover {
+  opacity: 0.65;
+  transition: .3s ease-in-out;
+}
+td {
+  border: 1px solid;
+  font-size: 90%;
+  word-wrap:break-word;
+  word-break:break-all;
+}
+
+.logo-responsive {
+  margin-left:100px;
+}
+
+
+
+.individualFacility {
+  background:#f1ebfb;
+  border: 2px solid black;
+}
+
+.nav-item {
+  font-size: medium;
+}
+
+
+
+.navbar-nav > li{
+  margin-left:10px;
+  margin-right:10px;
+}
+
+.border {
+  border: 2px solid black;
+}
+
+.error{
+  color: red;
+  font-size: small;
+}
+
+#introduction {
+  margin-top: 100%;
+  padding-bottom: 25%;
+ } 
+
+
+footer {
+  color: white;
+  background-color: #014174;
+  position:absolute;
+  width: 100%;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer a, footer a:link, footer a:hover {
+  color: white;
+}
+
+footer .sm-circle {
+  border: 1px solid white;
+  border-radius: 50%;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  height: 30px;
+  width: 30px;
+  text-decoration: none;
+}
+
+footer .social-media {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}

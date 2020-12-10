@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+    integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel='shortcut icon' type='image/x-icon' href='./img/fav-icon.ico' />
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+     
+    </style>
+    <title>Add Facility | Covision</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar fixed-top navbar-toggleable-sm bg-primary navbar-inverse">
+            <a class="navbar-brand" href="home.html"><img id="logo" class="" src="../img/logo.png"></a>
+            <div class="container">
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <div class="navbar-nav">
+                        <li><a class="nav-item nav-link active text-center" href="/home.html">Home</a></li>
+                        <li><a class="nav-item nav-link text-center" href="/medicalfacilities.html">Medical
+                                Facilities</a></li>
+                        <li><a class="nav-item nav-link text-center" href="/testingfacilities.html">Testing Sites</a>
+                        </li>
+                        <li><a class="nav-item nav-link text-center" href="/requestppe.html">Request PPE</a></li>
+                        <li><a class="nav-item nav-link text-center" href="/donateppe.html">Donate PPE</a></li>
+                        <li>
+                            <a class="nav-item nav-link text-center" href="/postfacility.html"
+                                id="providerAddFacility">Post Facility</a>
+                        </li>
+                        <li>
+                            <a class="nav-item nav-link text-center" href="/managedonations.html"
+                                id="providerManageDonations">Manage Donations</a>
+                        </li>
+                    </div>
+                </div>
+            </div>
+            <a id="navLogin" class="btn btn-success btn-md m-1" href="/login.html" role="button">Log In</a>
+            <a id="navRegister" class="btn btn-danger btn-md m-1" href="/register.html" role="button">Register</a>
+            <a id="navLogout" class="btn btn-outline-info btn-md m-1" role="button"
+                style="display:none;background-color:rgb(147, 209, 233)">Log Out</a>
+            <a id="navUser" class="btn btn-outline-info btn-md m-1" href="/manageaccount.html" role="button"
+                style="display:none; background-color:rgb(159, 190, 231); color:black;"></a>
+        </nav>
+
+    </header>
+
+
+    <div class="container-fluid">
+
+    
+        <div class = "row justify-content-center">
+                <h1> Add a facility </h1>
+        </div>
+       
+
+        <form class ="form-container" id="addFacility" method="POST">
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="facilityChoice" style="font-weight:bold">Facility type</label>
+                        <select id="facilityChoice" name="facilityChoice" class="form-control">
+                            <option selected>Choose facility type</option>
+                            <option id="chooseMedical">Medical facility</option>
+                            <option id="chooseTesting">Testing facility</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="col">
+                    <div class ="form-group">
+                        <label for="facilityName" style="font-weight:bold">Facility name</label>
+                        <input id="facilityName" name="facilityName" class="form-control" type="text" placeholder="Facility name">
+                    </div>
+                </div>
+            </div>    
+        
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="Address" style="font-weight:bold">Address</label>
+                    <input id="address" name="address" class="form-control" type="text" placeholder="Address"></input>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="city" style="font-weight:bold">City</label>
+                    <input id="city" name="city" class="form-control" type="text" placeholder="City"></input>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="zip" style="font-weight:bold">Zip code</label>
+                    <input id="zip" name="zip" class="form-control" type="text" placeholder="Zip code"></label>
+                </div>
+            </div>
+        </div>
+
+        <div class ="row">
+            <div class = "col">
+                <h3>Hours of Operation</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class ="col">
+                <div class="form-group">
+                    <label for="sunday" style="font-weight:bold">Sunday</label>
+                    <input id="sunday" name="sunday" class="form-control" type="text" placeholder="Hours"></input>
+                </div>
+            </div>
+            <div class ="col">
+                <div class="form-group">
+                    <label for="monday" style="font-weight:bold">Monday</label>
+                    <input id="monday" name="monday" class="form-control" type="text" placeholder="Hours"></input>
+                </div>
+            </div>
+            <div class ="col">
+                <div class="form-group">
+                    <label for="tuesday" style="font-weight:bold">Tuesday</label>
+                    <input id="tuesday" name="tuesday" class="form-control" type="text" placeholder="Hours"></input>
+                </div>
+            </div>
+            <div class ="col">
+                <div class="form-group">
+                    <label for="wednesday" style="font-weight:bold">Wednesday</label>
+                    <input id="wednesday" name="wednesday" class="form-control" type="text" placeholder="Hours"></input>
+                </div>
+            </div>    
+            <div class ="col">
+                <div class="form-group">
+                    <label for="thursday" style="font-weight:bold">Thursday</label>
+                    <input id="thursday" name="thursday" class="form-control" type="text" placeholder="Hours"></input>
+                </div>
+            </div>
+            <div class ="col">
+                <div class="form-group">
+                    <label for="friday" style="font-weight:bold">Friday</label>
+                    <input id="friday" name="friday" class="form-control" type="text" placeholder="Hours"></input>
+                </div>
+            </div>
+            <div class ="col">
+                <div class="form-group">
+                    <label for="saturday" style="font-weight:bold">Saturday</label>
+                    <input id="saturday" name="saturday" class="form-control" type="text" placeholder="Hours"></input>
+                </div>
+            </div>
+         </div>
+        
+        <div class="row">
+            <div class="col">
+                <h3>More Information</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="info" style="font-weight:bold">Tell us more about your facility!</label>
+                    <textarea id="info" name="info" class="form-control" rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class ="col">
+                <div style="font-weight:bold">
+                    Would you like to sign up for our donation system?
+                </div>
+                <div>
+                    This would allow your facility to receive donations, as well as post donations for those in need! Click the checkbox to sign up!
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-check">
+                    <input id="donateCheck" class="form-check-input" type="checkbox">
+                    <label class="form-check-label" for="donateCheck">
+                       Sign up for our donation system
+                    </label>
+                </div>
+            </div>
+            <div class="col">
+                <button class="btn btn-primary btn-block" id ="facilitySubmit" type ="button">Submit</button>
+            </div>
+
+        </div>
+        </div>
+
+        </form>    
+
+    </div>
+</div>
+
+    
+     <!-- jQuery first, then Tether, then Bootstrap JS. -->
+     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+     integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+     crossorigin="anonymous"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+     integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+     crossorigin="anonymous"></script>
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+     integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+     crossorigin="anonymous"></script>
+
+         <!--Validation Script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+    <script src="../js/postFacility.js"></script>
+    <script src="../js/generic.js"></script>
+</body>
+</html>

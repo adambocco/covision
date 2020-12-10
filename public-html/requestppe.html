@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="./img/fav-icon.ico" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Request Supplies</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar fixed-top navbar-toggleable-sm bg-primary navbar-inverse">
+            <a class="navbar-brand" href="home.html"><img class="logo-responsive" src="./img/logo.png"></a>
+            <div class="container">
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <div class="navbar-nav">
+                        <li><a class="nav-item nav-link active text-center" href="/home.html">Home</a></li>
+                        <li><a class="nav-item nav-link text-center" href="/medicalfacilities.html">Medical
+                                Facilities</a></li>
+                        <li><a class="nav-item nav-link text-center" href="/testingfacilities.html">Testing Sites</a>
+                        </li>
+                        <li><a class="nav-item nav-link text-center" href="/requestppe.html">Request PPE</a></li>
+                        <li><a class="nav-item nav-link text-center" href="/donateppe.html">Donate PPE</a></li>
+                        <li><a class="nav-item nav-link text-center" href="/postfacility.html" id="providerAddFacility"
+                                style="display:none;">Post Facility</a></li>
+                        <li><a class="nav-item nav-link text-center" href="/managedonations.html"
+                                id="providerManageDonations" style="display:none;">Manage Donations</a></li>
+                    </div>
+                </div>
+            </div>
+            <a id="navLogin" class="btn btn-success btn-md m-1" href="/login.html" role="button">Log In</a>
+            <a id="navRegister" class="btn btn-danger btn-md m-1" href="/register.html" role="button">Register</a>
+            <a id="navLogout" class="btn btn-outline-info btn-md m-1" role="button"
+                style="display:none;background-color:rgb(147, 209, 233)">Log Out</a>
+            <a id="navUser" class="btn btn-outline-info btn-md m-1" href="/manageaccount.html" role="button"
+                style="display:none; background-color:rgb(159, 190, 231); color:black;"></a>
+        </nav>
+    </header>
+    <main>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="display-4 text-center my-4">Request Supplies</h1>
+                    <div class="lead">
+                        Choose a donation and specify a quantity you would like to request
+                        <br>
+                        You will receive an email notification when it is ready
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m-0 p-0" id="donationListings">
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="container">
+        <div class="row">
+            <p>Pages</p>
+            <div id="pagination">
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-md-3">
+                    <a href="/home.html"><img src="./img/logo.png" alt=""></a>
+                </div>
+                <div class="col-lg-3">
+                    <ul class="footer-nav">
+                        <a href="/medicalfacilities.html">
+                            <li>Medical Facilities</li>
+                        </a>
+                        <a href="/testingfacilities.html">
+                            <li>Testing Sites</li>
+                        </a>
+                        <a href="/requestppe.html">
+                            <li>Request PPE</li>
+                        </a>
+                        <a href="/donateppe.html">
+                            <li>Donate PPE</li>
+                        </a>
+                        <a href="/postfacility.html">
+                            <li>Post Facility</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <ul class="footer-nav">
+                        <a href="/faq.html">
+                            <li>FAQ</li>
+                        </a>
+                        <a href="#">
+                            <li>Contact Us</li>
+                        </a>
+                        <a href="/privacypolicy.html">
+                            <li>Privacy Policy</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <ul>
+                        <li><i class="fas fa-phone"></i> 203-321-4321</li>
+                        <li><i class="fas fa-envelope-square"></i> covision@covision.com</li>
+                    </ul>
+                    <ul class="social-media">
+                        <li>
+                            <a class="sm-circle" href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="sm-circle" href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="sm-circle" href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+</body>
+<script src="../js/generic.js"></script>
+<script src="../js/requestppe.js"></script>
+
+</html>

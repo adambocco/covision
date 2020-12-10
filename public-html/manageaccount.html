@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="shortcut icon" type="image/x-icon" href="./img/fav-icon.ico" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+
+    </style>
+    <title>Account Management | Covision</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar fixed-top navbar-toggleable-sm bg-primary navbar-inverse">
+
+            <a class="navbar-brand" href="home.html"><img class="logo-responsive" src="./img/logo.png"></a>
+
+            <div class="container">
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <div class="navbar-nav">
+                        <li><a class="nav-item nav-link active text-center" href="/home.html">Home</a></li>
+                        <li><a class="nav-item nav-link text-center" href="/medicalfacilities.html">Medical
+                                Facilities</a></li>
+                        <li><a class="nav-item nav-link text-center" href="/testingfacilities.html">Testing Sites</a>
+                        </li>
+                        <li><a class="nav-item nav-link text-center" href="/requestppe.html">Request PPE</a></li>
+                        <li><a class="nav-item nav-link text-center" href="/donateppe.html">Donate PPE</a></li>
+
+                        <li><a class="nav-item nav-link text-center" href="/postfacility.html" id="providerAddFacility"
+                                style="display:none;">Post Facility</a></li>
+                        <li><a class="nav-item nav-link text-center" href="/managedonations.html"
+                                id="providerManageDonations" style="display:none;">Manage Donations</a></li>
+
+                    </div>
+                </div>
+            </div>
+            <a id="navLogin" class="btn btn-success btn-md m-1" href="/login.html" role="button">Log In</a>
+            <a id="navRegister" class="btn btn-danger btn-md m-1" href="/register.html" role="button">Register</a>
+            <a id="navLogout" class="btn btn-outline-info btn-md m-1" role="button"
+                style="display:none;background-color:rgb(147, 209, 233)">Log Out</a>
+            <a id="navUser" class="btn btn-outline-info btn-md m-1" href="/manageaccount.html" role="button"
+                style="display:none; background-color:rgb(159, 190, 231); color:black;"></a>
+        </nav>
+    </header>
+
+    <div class="modal fade" id="modalPassword" tabindex="-1" role="dialog" aria-labelledby="labelPassword" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <p id="wrongPassword"
+                style="display:none;font-weight:bold;color:rgb(0, 0, 0);background-color:rgb(207, 80, 80); border:2px solid black;padding:1em;margin:1em;text-align:center;font-size:1.5em;">
+                Wrong Password
+            </p>
+            <form id = "changePassword" method ="POST">
+                <div class="modal-body">                
+                    <div class="form-group">
+                        <label for="currentPassword" style="font-weight:bold">Enter Your Current Password</label>
+                        <input id="currentPassword" name="currentPassword" class="form-control" type="password" placeholder="Enter current password"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="newPassword1" style="font-weight:bold">Enter New Password</label>
+                        <input id="newPassword1" name="newPassword1" class="form-control" type="password" placeholder="Enter new password"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="newPassword2" style="font-weight:bold">Confirm New Password</label>
+                        <input id="newPassword2" name="newPassword2" class="form-control" type="password" placeholder="Re-enter new password"></input>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Change Password</button>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="display-4 text-center my-4">Account Management</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="display-12 text-center" id="email"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="display-12 text-center">
+                    <a href ="#modalPassword" data-toggle="modal">Change Password</a>
+                </div>
+                <p id="passwordChangeSuccess" style="color:aliceblue; text-align:center; border:1px solid black; display:none;background:green;">Password successfully changed!</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h1 class="display-4 text-center my-4">Manage your facilities</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="facilityListings">
+
+
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <span class="">
+                        COVISION &COPY; 2020
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+        integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+
+    <!--Validation Script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+    <script src="../js/generic.js"></script>
+    <script src="../js/manageAccount.js"></script>
+
+</body>
+
+</html>
